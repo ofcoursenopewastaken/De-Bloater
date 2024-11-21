@@ -129,11 +129,11 @@ public class PackageTasks {
 
     public static String getAdjAPKPath(String apkPath) {
         if (apkPath.startsWith("/product/")) {
-            apkPath = apkPath.replace("/product", "/system/product");
+            apkPath = apkPath.replace("/product", "/product");
         } else if (apkPath.startsWith("/vendor/")) {
-            apkPath = apkPath.replace("/vendor", "/system/vendor");
+            apkPath = apkPath.replace("/vendor", "/vendor");
         } else if (apkPath.startsWith("/system_ext/")) {
-            apkPath = apkPath.replace("/system_ext", "/system/system_ext");
+            apkPath = apkPath.replace("/system_ext", "/system_ext");
         }
         return apkPath;
     }
