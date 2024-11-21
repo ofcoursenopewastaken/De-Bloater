@@ -70,7 +70,7 @@ public class PackageTasks {
 
     public static List<String> getInactivePackageData() {
         List<String> mData = new ArrayList<>();
-        for (String line : Utils.runAndGetOutput(Utils.magiskBusyBox() + "find " + Common.getModuleParent() + "/system -type f -name *.apk").split("\\r?\\n")) {
+        for (String line : Utils.runAndGetOutput(Utils.magiskBusyBox() + "find " + Common.getModuleParent() + " -type f -name *.apk").split("\\r?\\n")) {
             if (line.endsWith(".apk")) {
                 if (Common.getSearchText() == null) {
                     mData.add(line);
